@@ -1,0 +1,11 @@
+version: '3'
+services:
+  predictive-keyboard:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_ENV=production
+      - FLASK_APP=app.py
